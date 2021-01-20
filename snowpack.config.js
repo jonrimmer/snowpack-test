@@ -1,8 +1,11 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: {url: '/', static: true},
-    src: {url: '/dist'},
+    public: { url: '/', static: true },
+    src: { url: '/dist' },
+  },
+  alias: {
+    moment: './shims/moment',
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
